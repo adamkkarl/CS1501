@@ -1,0 +1,61 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name: Adam Karl
+
+Lecture section: C (Tu/Th 2:30-3:45)
+
+Recitation day and time: F 2-2:50
+
+Assignment #: 2
+
+Program due date: 3/1/2020
+
+Handed in date: 3/1/2020
+
+Source code file name(s): MyLZW.java
+
+
+
+
+
+
+
+Other file name(s) (if relevant):
+
+sorry about adding LZW.java, I submitted it by accident and Box won't let me delete it
+
+info_sheet.txt
+results.txt
+
+
+
+
+Does your program run without error?: Yes
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+
+
+
+
+
+Additional comments to the grader:
+
+As implemented, the compression ratio heuristic for monitor mode resets completely with
+the codebook. I also tried keeping the data before the reset and all.tar actually
+compressed much better, so I included that data in results.txt. In order to run
+this implementation lines 134, 135, 263, and 264 should be commented out.
+
+Sorry about the inconsistent strategies between my functions. I started with do-nothing
+mode, then used the code from that to implement reset mode. Then, I attempted to use
+the reset mode code to implement monitor mode but I had trouble syncing up the codebook
+resets. Debugging showed that expansion would always reset one character before
+or one character after the compression algorithm, and for the life of me I couldn't get
+it to sync up perfectly until I pretty much threw out the code from do-nothing and
+reset modes and started from scratch for monitor mode.
