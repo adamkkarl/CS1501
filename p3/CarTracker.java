@@ -15,6 +15,14 @@ public class CarTracker {
 
     private void addCarFromFile(String info) {
       Car car = new Car(info);
+      carsList.add(car);
+    }
+
+    private void printCars() {
+      int numCars = carsList.size();
+      for (int i=0; i<numCars; i++) {
+        System.out.println(carsList.get(i).VIN);
+      }
     }
 
     Heap() {
@@ -54,6 +62,7 @@ public class CarTracker {
     } catch (Exception e) {
       System.out.println("Issue reading cars.txt");
     }
+    cars.printCars();
   }
 
   public static void main(String[] args) {
