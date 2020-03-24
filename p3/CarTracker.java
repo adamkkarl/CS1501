@@ -43,6 +43,7 @@ public class CarTracker {
         color = i[5];
       }
     }
+
   }
 
   private static void readFile(Heap cars) {
@@ -68,6 +69,42 @@ public class CarTracker {
   public static void main(String[] args) {
     Heap cars = new Heap();
     readFile(cars);
+
+    Scanner sc = new Scanner(System.in);
+    while(true) {
+      System.out.print("1. Add a car\n" +
+      "2. Update a car\n" +
+      "3. Remove a specific car from consideration\n" +
+      "4. Retrieve the lowest price car\n" +
+      "5. Retrieve the lowest mileage car\n" +
+      "6. Retrieve the lowest price car byy make and model\n" +
+      "7. Retrieve the lowest mileage car by make and model\n" +
+      "8. Exit\n" +
+      "Enter the number of the chosen operation: ");
+      int choice = sc.nextInt();
+      System.out.println();
+      if (choice == 1) {
+        System.out.println("Add Car\n");
+      } else if (choice == 2) {
+        System.out.println("Update Car\n");
+      } else if (choice == 3) {
+        System.out.println("Remove Car\n");
+      } else if (choice == 4) {
+        System.out.println("Lowest Price\n");
+      } else if (choice == 5) {
+        System.out.println("Add Mileage\n");
+      } else if (choice == 6) {
+        System.out.println("Add Price by Model\n");
+      } else if (choice == 7) {
+        System.out.println("Add Mileage by Model\n");
+      } else if (choice == 8) {
+        System.out.println("Exit\n");
+        break;
+      } else {
+        System.out.println("Bad input, try again\n");
+      }
+
+    }
 
   }
 }
