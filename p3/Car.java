@@ -11,7 +11,7 @@ class Car {
 
   public String toString() {
     return "VIN: " + VIN + "\nMake: " + make + "\nModel: " + model +
-    "\nPrice: $" + price + "\nMileage: " + mileage + "\nColor:" + color;
+    "\nPrice: $" + price + "\nMileage: " + mileage + "\nColor:" + color + "\n";
   }
 
   public String getVIN() {
@@ -24,6 +24,18 @@ class Car {
 
   public int getMileage() {
     return this.mileage;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public void setPrice(int price) {
+    this.price = price;
+  }
+
+  public void setMileage(int mileage) {
+    this.mileage = mileage;
   }
 
   public int comparePriceTo(Car c) {

@@ -6,51 +6,22 @@
  *  Minimum-oriented indexed PQ implementation using a binary heap.
  *
  ******************************************************************************/
-
-//package edu.princeton.cs.algs4;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.*;
 import java.io.File;
 
 /**
- *  The {@code CarIndexMinPQ} class represents an indexed priority queue of generic cars.
- *  It supports the usual <em>insert</em> and <em>delete-the-minimum</em>
- *  operations, along with <em>delete</em> and <em>change-the-car</em>
- *  methods. In order to let the client refer to cars on the priority queue,
- *  an integer between {@code 0} and {@code maxN - 1}
- *  is associated with each car—the client uses this integer to specify
- *  which car to delete or change.
- *  It also supports methods for peeking at the minimum car,
- *  testing if the priority queue is empty, and iterating through
- *  the cars.
- *  <p>
- *  This implementation uses a binary heap along with an array to associate
- *  cars with integers in the given range.
- *  The <em>insert</em>, <em>delete-the-minimum</em>, <em>delete</em>,
- *  <em>change-car</em>, <em>decrease-car</em>, and <em>increase-car</em>
- *  operations take &Theta;(log <em>n</em>) time in the worst case,
- *  where <em>n</em> is the number of elements in the priority queue.
- *  Construction takes time proportional to the specified capacity.
- *  <p>
- *  For additional documentation, see
- *  <a href="https://algs4.cs.princeton.edu/24pq">Section 2.4</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Car> the generic type of car on this priority queue
+ *  Heavily modified version of IndexMinPQ.java from the textbook
  */
-public class CarIndexMinPQ { //<Car extends Comparable<Car>> implements Iterable<Integer>
+public class CarIndexMinPQ { ////<Car extends Comparable<Car>> implements Iterable<Integer>
     private int maxN;        // maximum number of elements on PQ
     private int n;           // number of elements on PQ
     private int[] pq;        // binary heap using 1-based indexing
     private int[] qp;        // inverse of pq - qp[pq[i]] = pq[qp[i]] = i
     private Car[] cars;      // cars[i] = priority of i
 
-    String type;
+    String type; //either "price" or "mileage"
 
     /**
      * Initializes an empty indexed priority queue with indices between {@code 0}
@@ -67,7 +38,7 @@ public class CarIndexMinPQ { //<Car extends Comparable<Car>> implements Iterable
         n = 0;
         cars = new Car[maxN + 1];    // make this of length maxN??
         pq   = new int[maxN + 1];
-        qp   = new int[maxN + 1];                   // make this of length maxN??
+        qp   = new int[maxN + 1];    // make this of length maxN??
         for (int i = 0; i <= maxN; i++)
             qp[i] = -1;
     }
@@ -205,61 +176,61 @@ public class CarIndexMinPQ { //<Car extends Comparable<Car>> implements Iterable
         changeCar(i, car);
     }
 
-    /**
-     * Decrease the car associated with index {@code i} to the specified value.
-     *
-     * @param  i the index of the car to decrease
-     * @param  car decrease the car associated with index {@code i} to this car
-     * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
-     * @throws IllegalArgumentException if {@code car >= carOf(i)}
-     * @throws NoSuchElementException no car is associated with index {@code i}
-     */
-    public void decreaseCar(int i, Car car) {
-        validateIndex(i);
-        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-        if (this.type == "price") {
-          if (cars[i].comparePriceTo(car) == 0)
-              throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
-          if (cars[i].comparePriceTo(car) < 0)
-              throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
-        } else {
-          if (cars[i].compareMileageTo(car) == 0)
-              throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
-          if (cars[i].compareMileageTo(car) < 0)
-              throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
+    // /**
+    //  * Decrease the car associated with index {@code i} to the specified value.
+    //  *
+    //  * @param  i the index of the car to decrease
+    //  * @param  car decrease the car associated with index {@code i} to this car
+    //  * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
+    //  * @throws IllegalArgumentException if {@code car >= carOf(i)}
+    //  * @throws NoSuchElementException no car is associated with index {@code i}
+    //  */
+    // public void decreaseCar(int i, Car car) {
+    //     validateIndex(i);
+    //     if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+    //     if (this.type == "price") {
+    //       if (cars[i].comparePriceTo(car) == 0)
+    //           throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
+    //       if (cars[i].comparePriceTo(car) < 0)
+    //           throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
+    //     } else {
+    //       if (cars[i].compareMileageTo(car) == 0)
+    //           throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
+    //       if (cars[i].compareMileageTo(car) < 0)
+    //           throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
+    //
+    //     }
+    //     cars[i] = car;
+    //     swim(qp[i]);
+    // }
 
-        }
-        cars[i] = car;
-        swim(qp[i]);
-    }
-
-    /**
-     * Increase the car associated with index {@code i} to the specified value.
-     *
-     * @param  i the index of the car to increase
-     * @param  car increase the car associated with index {@code i} to this car
-     * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
-     * @throws IllegalArgumentException if {@code car <= carOf(i)}
-     * @throws NoSuchElementException no car is associated with index {@code i}
-     */
-    public void increaseCar(int i, Car car) {
-        validateIndex(i);
-        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-        if (this.type == "price") {
-          if (cars[i].comparePriceTo(car) == 0)
-              throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
-          if (cars[i].comparePriceTo(car) > 0)
-              throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
-        } else {
-          if (cars[i].compareMileageTo(car) == 0)
-              throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
-          if (cars[i].compareMileageTo(car) > 0)
-              throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
-        }
-
-        cars[i] = car;
-        sink(qp[i]);
-    }
+    // /**
+    //  * Increase the car associated with index {@code i} to the specified value.
+    //  *
+    //  * @param  i the index of the car to increase
+    //  * @param  car increase the car associated with index {@code i} to this car
+    //  * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
+    //  * @throws IllegalArgumentException if {@code car <= carOf(i)}
+    //  * @throws NoSuchElementException no car is associated with index {@code i}
+    //  */
+    // public void increaseCar(int i, Car car) {
+    //     validateIndex(i);
+    //     if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+    //     if (this.type == "price") {
+    //       if (cars[i].comparePriceTo(car) == 0)
+    //           throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
+    //       if (cars[i].comparePriceTo(car) > 0)
+    //           throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
+    //     } else {
+    //       if (cars[i].compareMileageTo(car) == 0)
+    //           throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
+    //       if (cars[i].compareMileageTo(car) > 0)
+    //           throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
+    //     }
+    //
+    //     cars[i] = car;
+    //     sink(qp[i]);
+    // }
 
     /**
      * Remove the car associated with index {@code i}.
@@ -366,7 +337,7 @@ public class CarIndexMinPQ { //<Car extends Comparable<Car>> implements Iterable
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-      CarIndexMinPQ pq = new CarIndexMinPQ(20, "mileage");
+      CarIndexMinPQ pq = new CarIndexMinPQ(100, "price");
       try {
         File f = new File("cars.txt");
         Scanner sc = new Scanner(f);
@@ -383,7 +354,7 @@ public class CarIndexMinPQ { //<Car extends Comparable<Car>> implements Iterable
       }
 
     while (!pq.isEmpty()) {
-      System.out.println(pq.minCar().toString());
+      System.out.println(pq.minCar().toString() + "\n");
       pq.delMin();
 
     }

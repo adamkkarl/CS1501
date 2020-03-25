@@ -10,32 +10,10 @@ import java.io.File;
  */
 
 public class CarTracker {
-  // private static class Heap {
-  //   List<Car> carsList;
-  //
-  //   private void addCarFromFile(String info) {
-  //     Car car = new Car(info);
-  //     carsList.add(car);
-  //   }
-  //
-  //   private void printCars() {
-  //     int numCars = carsList.size();
-  //     for (int i=0; i<numCars; i++) {
-  //       System.out.println(carsList.get(i).toString());
-  //     }
-  //   }
-  //
-  //   Heap() {
-  //     carsList = new ArrayList<Car>();
-  //   }
-  // 
-  //
-  //
-  // }
 
-  private static void readFile(Heap cars) {
+  private static void readFile(CarHeaps cars) {
   /*
-   * Given a Heap object, read the file "cars.txt" into the heap
+   * Given a CarHeaps object, read the file "cars.txt" into it
    */
     try {
       File f = new File("cars.txt");
@@ -43,18 +21,18 @@ public class CarTracker {
       while(sc.hasNext()) {
         String line = sc.nextLine();
         if (line.charAt(0) != '#') { //don't read in comment lines
-          cars.addCarFromFile(line);
+          Car c = new Car(line);
+          cars.add(c);
         }
       }
       sc.close();
     } catch (Exception e) {
       System.out.println("Issue reading cars.txt");
     }
-    cars.printCars();
   }
 
   public static void main(String[] args) {
-    Heap cars = new Heap();
+    CarHeaps cars = new CarHeaps(100);
     readFile(cars);
 
     Scanner sc = new Scanner(System.in);
@@ -77,13 +55,17 @@ public class CarTracker {
       } else if (choice == 3) {
         System.out.println("Remove Car\n");
       } else if (choice == 4) {
-        System.out.println("Lowest Price\n");
+        System.out.println("Get Lowest Price\n");
+        Car c = cars.getMinPrice();
+        System.out.println(c.toString());
       } else if (choice == 5) {
-        System.out.println("Add Mileage\n");
+        System.out.println("Get Lowest Mileage\n");
+        Car c = cars.getMinMileage();
+        System.out.println(c.toString());
       } else if (choice == 6) {
-        System.out.println("Add Price by Model\n");
+        System.out.println("Get Lowest Price by Model\n");
       } else if (choice == 7) {
-        System.out.println("Add Mileage by Model\n");
+        System.out.println("Get Lowest Mileage by Model\n");
       } else if (choice == 8) {
         System.out.println("Exit\n");
         break;
