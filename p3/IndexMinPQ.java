@@ -48,6 +48,8 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
     private int[] qp;        // inverse of pq - qp[pq[i]] = pq[qp[i]] = i
     private Key[] keys;      // keys[i] = priority of i
 
+    private String type; //"price" or "mileage"
+
     /**
      * Initializes an empty indexed priority queue with indices between {@code 0}
      * and {@code maxN - 1}.
@@ -55,9 +57,11 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
      *         {@code maxN - 1}
      * @throws IllegalArgumentException if {@code maxN < 0}
      */
-    public IndexMinPQ(int maxN) {
+    public IndexMinPQ(int maxN, String type) {
         if (maxN < 0) throw new IllegalArgumentException();
         this.maxN = maxN;
+        if (!type.equals("price") && !type.equals("mileage")) throw new IllegalArgumentException();
+        this.type = type
         n = 0;
         keys = (Key[]) new Comparable[maxN + 1];    // make this of length maxN??
         pq   = new int[maxN + 1];
@@ -211,10 +215,19 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
     public void decreaseKey(int i, Key key) {
         validateIndex(i);
         if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-        if (keys[i].compareTo(key) == 0)
-            throw new IllegalArgumentException("Calling decreaseKey() with a key equal to the key in the priority queue");
-        if (keys[i].compareTo(key) < 0)
-            throw new IllegalArgumentException("Calling decreaseKey() with a key strictly greater than the key in the priority queue");
+        if (this.type == "price") {
+          if (keys[i].comparePriceTo(key) == 0)
+              throw new IllegalArgumentException("Calling decreaseKey() with a key equal to the key in the priority queue");
+          if (keys[i].comparePriceTo(key) < 0)
+              throw new IllegalArgumentException("Calling decreaseKey() with a key strictly greater than the key in the priority queue");
+        } else if (this.type == "mileage") {
+          if (keys[i].compareMileageTo(key) == 0)
+              throw new IllegalArgumentException("Calling decreaseKey() with a key equal to the key in the priority queue");
+          if (keys[i].compareMileageTo(key) < 0)
+              throw new IllegalArgumentException("Calling decreaseKey() with a key strictly greater than the key in the priority queue");
+
+        } else throw new IllegalArgumentException("invalid type: neither 'price' nor 'mileage'");
+
         keys[i] = key;
         swim(qp[i]);
     }
@@ -231,10 +244,21 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
     public void increaseKey(int i, Key key) {
         validateIndex(i);
         if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-        if (keys[i].compareTo(key) == 0)
-            throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the priority queue");
-        if (keys[i].compareTo(key) > 0)
-            throw new IllegalArgumentException("Calling increaseKey() with a key strictly less than the key in the priority queue");
+
+        if (this.type == "price") {
+          if (keys[i].comparePriceTo(key) == 0)
+              throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the priority queue");
+          if (keys[i].comparePriceTo(key) > 0)
+              throw new IllegalArgumentException("Calling increaseKey() with a key strictly less than the key in the priority queue");
+
+        } else if (this.type == "mileage") {
+          if (keys[i].compareMileageTo(key) == 0)
+              throw new IllegalArgumentException("Calling increaseKey() with a key equal to the key in the priority queue");
+          if (keys[i].compareMileageTo(key) > 0)
+              throw new IllegalArgumentException("Calling increaseKey() with a key strictly less than the key in the priority queue");
+
+        } else throw new IllegalArgumentException("invalid type: neither 'price' nor 'mileage'");
+
         keys[i] = key;
         sink(qp[i]);
     }
@@ -267,7 +291,12 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
     * General helper functions.
     ***************************************************************************/
     private boolean greater(int i, int j) {
-        return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
+        if (this.type == "price") {
+          return keys[pq[i]].comparePriceTo(keys[pq[j]]) > 0;
+        } else if (this.type == "mileage") {
+          return keys[pq[i]].compareMileageTo(keys[pq[j]]) > 0;
+        } else throw new IllegalArgumentException("invalid type: neither 'price' nor 'mileage'");
+
     }
 
     private void exch(int i, int j) {
