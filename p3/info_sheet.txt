@@ -39,8 +39,8 @@ Does your program run without error?:
 If not, what is/are the error(s) and which parts of your program run
 correctly?:
 
-
-
+compare 2 ways:
+https://stackoverflow.com/questions/21612621/is-it-possible-to-have-two-compareto-methods-for-a-value-class
 
 
 

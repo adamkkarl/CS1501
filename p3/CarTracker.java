@@ -10,45 +10,28 @@ import java.io.File;
  */
 
 public class CarTracker {
-  private static class Heap {
-    List<Car> carsList;
-
-    private void addCarFromFile(String info) {
-      Car car = new Car(info);
-      carsList.add(car);
-    }
-
-    private void printCars() {
-      int numCars = carsList.size();
-      for (int i=0; i<numCars; i++) {
-        System.out.println(carsList.get(i).toString());
-      }
-    }
-
-    Heap() {
-      carsList = new ArrayList<Car>();
-    }
-
-    private static class Car {
-      String VIN, make, model, color;
-      int price, mileage;
-
-    public String toString() {
-      return VIN + " " + make + " " + model + " " + price + " " + mileage + " " + color;
-    }
-
-      Car (String info) {
-        String[] i = info.split(":");
-        VIN = i[0];
-        make = i[1];
-        model = i[2];
-        price = Integer.parseInt(i[3]);
-        mileage = Integer.parseInt(i[4]);
-        color = i[5];
-      }
-    }
-
-  }
+  // private static class Heap {
+  //   List<Car> carsList;
+  //
+  //   private void addCarFromFile(String info) {
+  //     Car car = new Car(info);
+  //     carsList.add(car);
+  //   }
+  //
+  //   private void printCars() {
+  //     int numCars = carsList.size();
+  //     for (int i=0; i<numCars; i++) {
+  //       System.out.println(carsList.get(i).toString());
+  //     }
+  //   }
+  //
+  //   Heap() {
+  //     carsList = new ArrayList<Car>();
+  //   }
+  // 
+  //
+  //
+  // }
 
   private static void readFile(Heap cars) {
   /*
