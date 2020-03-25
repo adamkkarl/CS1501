@@ -21,7 +21,7 @@ public class CarTracker {
     private void printCars() {
       int numCars = carsList.size();
       for (int i=0; i<numCars; i++) {
-        System.out.println(carsList.get(i).VIN);
+        System.out.println(carsList.get(i).toString());
       }
     }
 
@@ -32,6 +32,10 @@ public class CarTracker {
     private static class Car {
       String VIN, make, model, color;
       int price, mileage;
+
+    public String toString() {
+      return VIN + " " + make + " " + model + " " + price + " " + mileage + " " + color;
+    }
 
       Car (String info) {
         String[] i = info.split(":");
@@ -77,7 +81,7 @@ public class CarTracker {
       "3. Remove a specific car from consideration\n" +
       "4. Retrieve the lowest price car\n" +
       "5. Retrieve the lowest mileage car\n" +
-      "6. Retrieve the lowest price car byy make and model\n" +
+      "6. Retrieve the lowest price car by make and model\n" +
       "7. Retrieve the lowest mileage car by make and model\n" +
       "8. Exit\n" +
       "Enter the number of the chosen operation: ");
