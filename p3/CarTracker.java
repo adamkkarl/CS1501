@@ -10,8 +10,9 @@ import java.io.File;
  */
 
 public class CarTracker {
+  private static CarHeaps cars = new CarHeaps(100);
 
-  private static void readFile(CarHeaps cars) {
+  private static void readFile() {
   /*
    * Given a CarHeaps object, read the file "cars.txt" into it
    */
@@ -31,9 +32,58 @@ public class CarTracker {
     }
   }
 
+  private static void add() {
+    Scanner sc = new Scanner(System.in);
+    String info = "";
+    System.out.print("Enter VIN: ");
+    info += sc.nextLine() + ":";
+    System.out.print("Enter make: ");
+    info += sc.nextLine() + ":";
+    System.out.print("Enter model: ");
+    info += sc.nextLine() + ":";
+    System.out.print("Enter price: ");
+    info += sc.nextLine() + ":";
+    System.out.print("Enter mileage: ");
+    info += sc.nextLine() + ":";
+    System.out.print("Enter color: ");
+    info += sc.nextLine();
+    Car c = new Car(info);
+    cars.add(c);
+  }
+
+  private static void update() {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter VIN of car to update: ");
+    String VIN = sc.nextLine();
+    System.out.println("Finding car...");
+    int i = cars.indexOfCar(VIN);
+    if (i == -1) {
+      System.out.println("\nERROR: CAR NOT FOUND\n");
+    } else {
+      System.out.println("Car found!");
+      System.out.println("1. Update Price\n2. Update Mileage\n3. Update Color");
+      System.out.print("Enter choice: ");
+      int choice = sc.nextInt();
+      if (choice == 1) {
+        System.out.print("Enter New Price: ");
+        int p = sc.nextInt();
+        cars.updatePrice(i, p);
+      } else if (choice == 2) {
+        System.out.print("Enter New Mileage: ");
+        int m = sc.nextInt();
+        cars.updateMileage(i, m);
+      } else if (choice == 3) {
+        System.out.print("Enter Color: ");
+        String c = sc.next();
+        cars.updateColor(i, c);
+      } else {
+        System.out.println("\nERROR: invalid choice\n");
+      }
+    }
+  }
+
   public static void main(String[] args) {
-    CarHeaps cars = new CarHeaps(100);
-    readFile(cars);
+    readFile();
 
     Scanner sc = new Scanner(System.in);
     while(true) {
@@ -50,8 +100,10 @@ public class CarTracker {
       System.out.println();
       if (choice == 1) {
         System.out.println("Add Car\n");
+        add();
       } else if (choice == 2) {
         System.out.println("Update Car\n");
+        update();
       } else if (choice == 3) {
         System.out.println("Remove Car\n");
       } else if (choice == 4) {

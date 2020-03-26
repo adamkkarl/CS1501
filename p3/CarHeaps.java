@@ -24,6 +24,16 @@ class CarHeaps {
     size++;
   }
 
+  public int indexOfCar(String VIN) {
+    //return index of car with matching VIN, of -1 if not found
+    for (int i = 0; i<size; i++) {
+      if (VIN.equals(carList.get(i).getVIN())) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   public void updateColor (int i, String color){
     Car car = carList.get(i);
 		car.setColor(color);
@@ -51,8 +61,8 @@ class CarHeaps {
   public void delete(int i) {
     price.delete(i);
     mileage.delete(i);
-    carList.set(i, carList.get(size-1)); //don't interfere with adjacent cars
-		carList.remove(size-1);
+    carList.set(i, carList.get(size-1)); //put last car in its place
+		carList.remove(size-1); //remove car
     size-=1;
   }
 

@@ -36,9 +36,9 @@ public class CarIndexMinPQ { ////<Car extends Comparable<Car>> implements Iterab
         if (!type.equals("mileage") && !type.equals("price")) throw new IllegalArgumentException();
         this.type = type;
         n = 0;
-        cars = new Car[maxN + 1];    // make this of length maxN??
+        cars = new Car[maxN + 1];
         pq   = new int[maxN + 1];
-        qp   = new int[maxN + 1];    // make this of length maxN??
+        qp   = new int[maxN + 1];
         for (int i = 0; i <= maxN; i++)
             qp[i] = -1;
     }

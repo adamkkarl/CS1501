@@ -11,7 +11,11 @@ class Car {
 
   public String toString() {
     return "VIN: " + VIN + "\nMake: " + make + "\nModel: " + model +
-    "\nPrice: $" + price + "\nMileage: " + mileage + "\nColor:" + color + "\n";
+    "\nPrice: $" + price + "\nMileage: " + mileage + "\nColor: " + color + "\n";
+  }
+
+  public String toOutput() { //more dense form-same as what's in cars.txt
+    return VIN+":"+make+":"+model +":"+price+":"+mileage+":"+color;
   }
 
   public String getVIN() {
