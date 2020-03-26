@@ -30,6 +30,14 @@ class Car {
     return this.mileage;
   }
 
+  public String getModel() {
+    return this.model;
+  }
+
+  public String getMake() {
+    return this.make;
+  }
+
   public void setColor(String color) {
     this.color = color;
   }

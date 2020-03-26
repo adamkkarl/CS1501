@@ -14,21 +14,19 @@ Recitation day and time:  Fr 1:00
 
 Assignment #:  3
 
-Program due date:  
+Program due date:  3/26/2020
 
-Handed in date:
+Handed in date:3/26/2020
 
 Source code file name(s):
 CarTracker.java
-
-
-
-
+CarHeaps.java
+CarIndexMinPQ.java
 
 
 Other file name(s) (if relevant):
-
-
+info_sheet.txt
+documentation.txt
 
 
 

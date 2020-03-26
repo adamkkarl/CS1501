@@ -5,6 +5,7 @@ class CarHeaps {
   CarIndexMinPQ mileage;
   List<Car> carList = new ArrayList<Car>();
   int size = 0;
+  int index = 0;
   int max;
 
   public CarHeaps(int n) {
@@ -19,13 +20,15 @@ class CarHeaps {
       return;
     }
     carList.add(c);
-    price.insert(size, c);
-    mileage.insert(size, c);
+    price.insert(index, c);
+    mileage.insert(index, c);
     size++;
+    index++;
   }
 
   public int indexOfCar(String VIN) {
     //return index of car with matching VIN, of -1 if not found
+    //TODO hashmap
     for (int i = 0; i<size; i++) {
       if (VIN.equals(carList.get(i).getVIN())) {
         return i;
@@ -58,9 +61,10 @@ class CarHeaps {
 		carList.set(i, car);
 	}
 
-  public void delete(int i) {
-    price.delete(i);
-    mileage.delete(i);
+  public void removeByVIN(String VIN) {
+    price.delCar(VIN);
+    mileage.delCar(VIN);
+    int i = indexOfCar(VIN);
     carList.set(i, carList.get(size-1)); //put last car in its place
 		carList.remove(size-1); //remove car
     size-=1;
@@ -68,12 +72,40 @@ class CarHeaps {
 
   public Car getMinMileage() {
     if (size == 0) return null;
-    return carList.get(mileage.minIndex());
+    return mileage.minCar();
   }
 
   public Car getMinPrice() {
     if (size == 0) return null;
-    return carList.get(price.minIndex());
+    return price.minCar();
+  }
+
+  public Car getMinMileage(String make, String model) {
+      CarIndexMinPQ carsOfMake = new CarIndexMinPQ(max, "mileage");
+      for (Car c : carList) {
+        if (c.getModel().equals(model) && c.getMake().equals(make)) {
+          carsOfMake.insert(carsOfMake.size(), c);
+        }
+      }
+      if (carsOfMake.size() == 0){
+        System.out.println("No cars of make and model found.");
+        return null;
+      }
+      return carsOfMake.minCar();
+  }
+
+  public Car getMinPrice(String make, String model) {
+      CarIndexMinPQ carsOfMake = new CarIndexMinPQ(max, "price");
+      for (Car c : carList) {
+        if (c.getModel().equals(model) && c.getMake().equals(make)) {
+          carsOfMake.insert(carsOfMake.size(), c);
+        }
+      }
+      if (carsOfMake.size() == 0){
+        System.out.println("No cars of make and model found.");
+        return null;
+      }
+      return carsOfMake.minCar();
   }
 
 }

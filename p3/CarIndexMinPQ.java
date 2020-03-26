@@ -133,6 +133,15 @@ public class CarIndexMinPQ { ////<Car extends Comparable<Car>> implements Iterab
         return min;
     }
 
+    public void delCar(String vin) {
+      for (int i=0; i<maxN; i++) {
+        if (cars[i].getVIN().equals(vin)) {
+          delete(i);
+          return;
+        }
+      }
+    }
+
     /**
      * Returns the car associated with index {@code i}.
      *
@@ -175,62 +184,6 @@ public class CarIndexMinPQ { ////<Car extends Comparable<Car>> implements Iterab
     public void change(int i, Car car) {
         changeCar(i, car);
     }
-
-    // /**
-    //  * Decrease the car associated with index {@code i} to the specified value.
-    //  *
-    //  * @param  i the index of the car to decrease
-    //  * @param  car decrease the car associated with index {@code i} to this car
-    //  * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
-    //  * @throws IllegalArgumentException if {@code car >= carOf(i)}
-    //  * @throws NoSuchElementException no car is associated with index {@code i}
-    //  */
-    // public void decreaseCar(int i, Car car) {
-    //     validateIndex(i);
-    //     if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-    //     if (this.type == "price") {
-    //       if (cars[i].comparePriceTo(car) == 0)
-    //           throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
-    //       if (cars[i].comparePriceTo(car) < 0)
-    //           throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
-    //     } else {
-    //       if (cars[i].compareMileageTo(car) == 0)
-    //           throw new IllegalArgumentException("Calling decreaseCar() with a car equal to the car in the priority queue");
-    //       if (cars[i].compareMileageTo(car) < 0)
-    //           throw new IllegalArgumentException("Calling decreaseCar() with a car strictly greater than the car in the priority queue");
-    //
-    //     }
-    //     cars[i] = car;
-    //     swim(qp[i]);
-    // }
-
-    // /**
-    //  * Increase the car associated with index {@code i} to the specified value.
-    //  *
-    //  * @param  i the index of the car to increase
-    //  * @param  car increase the car associated with index {@code i} to this car
-    //  * @throws IllegalArgumentException unless {@code 0 <= i < maxN}
-    //  * @throws IllegalArgumentException if {@code car <= carOf(i)}
-    //  * @throws NoSuchElementException no car is associated with index {@code i}
-    //  */
-    // public void increaseCar(int i, Car car) {
-    //     validateIndex(i);
-    //     if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
-    //     if (this.type == "price") {
-    //       if (cars[i].comparePriceTo(car) == 0)
-    //           throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
-    //       if (cars[i].comparePriceTo(car) > 0)
-    //           throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
-    //     } else {
-    //       if (cars[i].compareMileageTo(car) == 0)
-    //           throw new IllegalArgumentException("Calling increaseCar() with a car equal to the car in the priority queue");
-    //       if (cars[i].compareMileageTo(car) > 0)
-    //           throw new IllegalArgumentException("Calling increaseCar() with a car strictly less than the car in the priority queue");
-    //     }
-    //
-    //     cars[i] = car;
-    //     sink(qp[i]);
-    // }
 
     /**
      * Remove the car associated with index {@code i}.
@@ -294,42 +247,6 @@ public class CarIndexMinPQ { ////<Car extends Comparable<Car>> implements Iterab
             k = j;
         }
     }
-
-
-   /***************************************************************************
-    * Iterators.
-    ***************************************************************************/
-
-    /**
-     * Returns an iterator that iterates over the cars on the
-     * priority queue in ascending order.
-     * The iterator doesn't implement {@code remove()} since it's optional.
-     *
-     * @return an iterator that iterates over the cars in ascending order
-     */
-    // public Iterator<Integer> iterator() { return new HeapIterator(); }
-    //
-    // private class HeapIterator implements Iterator<Integer> {
-    //     // create a new pq
-    //     private CarIndexMinPQ<Car> copy;
-    //
-    //     // add all elements to copy of heap
-    //     // takes linear time since already in heap order so no cars move
-    //     public HeapIterator() {
-    //         copy = new CarIndexMinPQ<Car>(pq.length - 1);
-    //         for (int i = 1; i <= n; i++)
-    //             copy.insert(pq[i], cars[pq[i]]);
-    //     }
-    //
-    //     public boolean hasNext()  { return !copy.isEmpty();                     }
-    //     public void remove()      { throw new UnsupportedOperationException();  }
-    //
-    //     public Integer next() {
-    //         if (!hasNext()) throw new NoSuchElementException();
-    //         return copy.delMin();
-    //     }
-    // }
-
 
     /**
      * Unit tests the {@code CarIndexMinPQ} data type.

@@ -1,0 +1,15 @@
+The hardest thing about this project was getting the IndexMinPQ from the textbook to work
+with both sorting by mileage and by price, since the Comparable interface only allows
+one comparison. To solve this, I re-coded the file to specifically store cars, and now the
+min PQ will either have the type "price" or "mileage", and since it knows that it stores cars,
+it can call comparePriceTo or compareMileageTo from Car.java.
+
+Since the IndexMinPQ is a heap backed data structure (and there's one for each price and mileage),
+ calls to get the minimum price or minumum mileage run in constant time, and adds/removals run in log(n)
+ time to sink/swim.
+
+ I wish I was able to figure out a way to pass in a comparator into the CarIndexMinPQ instead of
+ having to make it specifically work with car objects, but I was ultimately unable and went the
+ hard-coding route. I'm aware that my code for this project is extremely messy, but I kept having problems
+ in the most unexpected places, like when the Scanner kept failing when breaking up CarTracker into
+ separate, neat methods.

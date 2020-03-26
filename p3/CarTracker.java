@@ -10,12 +10,9 @@ import java.io.File;
  */
 
 public class CarTracker {
-  private static CarHeaps cars = new CarHeaps(100);
+  private static CarHeaps cars = new CarHeaps(1000);
 
   private static void readFile() {
-  /*
-   * Given a CarHeaps object, read the file "cars.txt" into it
-   */
     try {
       File f = new File("cars.txt");
       Scanner sc = new Scanner(f);
@@ -29,56 +26,6 @@ public class CarTracker {
       sc.close();
     } catch (Exception e) {
       System.out.println("Issue reading cars.txt");
-    }
-  }
-
-  private static void add() {
-    Scanner sc = new Scanner(System.in);
-    String info = "";
-    System.out.print("Enter VIN: ");
-    info += sc.nextLine() + ":";
-    System.out.print("Enter make: ");
-    info += sc.nextLine() + ":";
-    System.out.print("Enter model: ");
-    info += sc.nextLine() + ":";
-    System.out.print("Enter price: ");
-    info += sc.nextLine() + ":";
-    System.out.print("Enter mileage: ");
-    info += sc.nextLine() + ":";
-    System.out.print("Enter color: ");
-    info += sc.nextLine();
-    Car c = new Car(info);
-    cars.add(c);
-  }
-
-  private static void update() {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter VIN of car to update: ");
-    String VIN = sc.nextLine();
-    System.out.println("Finding car...");
-    int i = cars.indexOfCar(VIN);
-    if (i == -1) {
-      System.out.println("\nERROR: CAR NOT FOUND\n");
-    } else {
-      System.out.println("Car found!");
-      System.out.println("1. Update Price\n2. Update Mileage\n3. Update Color");
-      System.out.print("Enter choice: ");
-      int choice = sc.nextInt();
-      if (choice == 1) {
-        System.out.print("Enter New Price: ");
-        int p = sc.nextInt();
-        cars.updatePrice(i, p);
-      } else if (choice == 2) {
-        System.out.print("Enter New Mileage: ");
-        int m = sc.nextInt();
-        cars.updateMileage(i, m);
-      } else if (choice == 3) {
-        System.out.print("Enter Color: ");
-        String c = sc.next();
-        cars.updateColor(i, c);
-      } else {
-        System.out.println("\nERROR: invalid choice\n");
-      }
     }
   }
 
@@ -100,12 +47,56 @@ public class CarTracker {
       System.out.println();
       if (choice == 1) {
         System.out.println("Add Car\n");
-        add();
+        String info = "";
+        System.out.print("Enter VIN: ");
+        info += sc.next() + ":";
+        System.out.print("Enter make: ");
+        info += sc.next() + ":";
+        System.out.print("Enter model: ");
+        info += sc.next() + ":";
+        System.out.print("Enter price: ");
+        info += sc.next() + ":";
+        System.out.print("Enter mileage: ");
+        info += sc.next() + ":";
+        System.out.print("Enter color: ");
+        info += sc.next();
+        Car c = new Car(info);
+        cars.add(c);
       } else if (choice == 2) {
         System.out.println("Update Car\n");
-        update();
+        System.out.print("Enter VIN of car to update: ");
+        String VIN = sc.next();
+        System.out.println("Finding car...");
+        int i = cars.indexOfCar(VIN);
+        if (i == -1) {
+          System.out.println("\nERROR: CAR NOT FOUND\n");
+        } else {
+          System.out.println("Car found!");
+          System.out.println("1. Update Price\n2. Update Mileage\n3. Update Color");
+          System.out.print("Enter choice: ");
+          int ch = sc.nextInt();
+          if (ch == 1) {
+            System.out.print("Enter New Price: ");
+            int p = sc.nextInt();
+            cars.updatePrice(i, p);
+          } else if (ch == 2) {
+            System.out.print("Enter New Mileage: ");
+            int m = sc.nextInt();
+            cars.updateMileage(i, m);
+          } else if (ch == 3) {
+            System.out.print("Enter Color: ");
+            String c = sc.next();
+            cars.updateColor(i, c);
+          } else {
+            System.out.println("\nERROR: invalid choice\n");
+          }
+        }
       } else if (choice == 3) {
         System.out.println("Remove Car\n");
+        System.out.print("Enter VIN of car to remove: ");
+        String VIN = sc.next();
+        cars.removeByVIN(VIN);
+        System.out.println("Car removed!");
       } else if (choice == 4) {
         System.out.println("Get Lowest Price\n");
         Car c = cars.getMinPrice();
@@ -116,10 +107,23 @@ public class CarTracker {
         System.out.println(c.toString());
       } else if (choice == 6) {
         System.out.println("Get Lowest Price by Model\n");
+        System.out.print("Enter Make: ");
+        String make = sc.next();
+        System.out.print("Enter Model: ");
+        String model = sc.next();
+        Car c = cars.getMinPrice(make, model);
+        System.out.println(c.toString());
       } else if (choice == 7) {
         System.out.println("Get Lowest Mileage by Model\n");
+        System.out.print("Enter Make: ");
+        String make = sc.next();
+        System.out.print("Enter Model: ");
+        String model = sc.next();
+        Car c = cars.getMinMileage(make, model);
+        System.out.println(c.toString());
       } else if (choice == 8) {
         System.out.println("Exit\n");
+        sc.close();
         break;
       } else {
         System.out.println("Bad input, try again\n");
