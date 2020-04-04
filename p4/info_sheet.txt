@@ -6,17 +6,17 @@ You must submit an information sheet with every assignment.  Also be sure
 to submit all materials following the procedures described on the
 submission procedures page.
 
-Name:  
+Name:
 
-Lecture section:  
+Lecture section:
 
-Recitation day and time:  
+Recitation day and time:
 
-Assignment #:  
+Assignment #:
 
-Program due date:  
+Program due date:
 
-Handed in date:  
+Handed in date:
 
 Source code file name(s):
 
@@ -28,7 +28,8 @@ Source code file name(s):
 
 Other file name(s) (if relevant):
 
-
+removed line:
+package edu.princeton.cs.algs4;
 
 
 
@@ -46,10 +47,3 @@ correctly?:
 
 
 Additional comments to the grader:
-
-
-
-
-
-
-
