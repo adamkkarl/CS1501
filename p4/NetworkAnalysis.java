@@ -63,7 +63,6 @@ public class NetworkAnalysis {
 
         DijkstraAllPairsSP allPairs = new DijkstraAllPairsSP(G);
         Iterable<DirectedEdge> path = allPairs.path(v,w);
-        System.out.println(path);
         int bandwidth = 0;
         for (DirectedEdge p : path) {
           int myV = p.from();
@@ -111,6 +110,47 @@ public class NetworkAnalysis {
         System.out.println("copper connected\n");
 
       } else if (option == 3) {
+        boolean stillConnected = true;
+        for (int missingV1=0; missingV1<vertices-1; missingV1++) {
+          for (int missingV2=missingV1+1; missingV2<vertices; missingV2++) {
+            if (stillConnected) {
+              EdgeWeightedDigraph missingG = new EdgeWeightedDigraph(vertices);
+              for (ArrayList<MyEdge> list : adjList) {
+                for (MyEdge myEdge : list) {
+                  if (myEdge.to()!=missingV1 && myEdge.to()!=missingV2 && myEdge.from()!=missingV1 && myEdge.from()!=missingV2) {
+                    //only edges to valid vertices
+                    DirectedEdge e = new DirectedEdge(myEdge.from(), myEdge.to(), myEdge.getLatency());
+                    missingG.addEdge(e);
+                  }
+                }
+              }
+
+              DijkstraAllPairsSP allPairs = new DijkstraAllPairsSP(missingG);
+
+              for (int myV=0; myV<vertices-1; myV++) {
+                for (int myW=myV+1; myW<vertices; myW++) {
+                  if (myV!=missingV1 && myV!=missingV2 && myW!=missingV1 && myW!=missingV2) {
+                    if (!allPairs.hasPath(myV, myW)) {
+                      stillConnected = false;
+                    }
+                  }
+
+                }
+              }
+
+
+
+
+
+
+            }
+          }
+        }
+        System.out.println();
+        if (!stillConnected) {
+          System.out.print("NOT ");
+        }
+        System.out.println("still connected\n");
 
       }
     }
