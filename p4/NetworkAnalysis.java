@@ -111,6 +111,10 @@ public class NetworkAnalysis {
 
       } else if (option == 3) {
         boolean stillConnected = true;
+        if (vertices <= 2) {
+          stillConnected = false;
+        }
+
         for (int missingV1=0; missingV1<vertices-1; missingV1++) {
           for (int missingV2=missingV1+1; missingV2<vertices; missingV2++) {
             if (stillConnected) {
@@ -137,10 +141,6 @@ public class NetworkAnalysis {
 
                 }
               }
-
-
-
-
 
 
             }

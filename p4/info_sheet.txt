@@ -6,36 +6,49 @@ You must submit an information sheet with every assignment.  Also be sure
 to submit all materials following the procedures described on the
 submission procedures page.
 
-Name:
+Name: Adam Karl
 
-Lecture section:
+Lecture section: C (Tu/Th 2:30-4)
 
-Recitation day and time:
+Recitation day and time: Fr 1-2
 
-Assignment #:
+Assignment #: 4
 
-Program due date:
+Program due date: 4/5/2020
 
-Handed in date:
+Handed in date: 4/5/2020
 
 Source code file name(s):
+NetworkAnalysis.java
+MyEdge.java
 
 
 
 
 
 
+Other file name(s) (if relevant): (textbook files)
+Bag.java
+DijkstraAllPairsSP.java
+DijkstraSP.java
+DirectedEdge.java
+EdgeWeightedDigraph.java
+In.java
+IndexMinPQ.java
+Stack.java
+StdIn.java
+StdOut.java
 
-Other file name(s) (if relevant):
 
-removed line:
+all files practically unmodified from textbook except removed some references to StdRandom and
+package line:
 package edu.princeton.cs.algs4;
 
 
 
 
 
-Does your program run without error?:
+Does your program run without error?: Yes
 
 If not, what is/are the error(s) and which parts of your program run
 correctly?:
