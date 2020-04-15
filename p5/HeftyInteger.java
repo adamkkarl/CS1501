@@ -189,12 +189,19 @@ public class HeftyInteger {
 	private byte[] prodBytes(byte m1, byte m2) {
 		int mult = ((int)m1)&0xff;
 		int mcand = ((int)m2)&0xff;
-		System.out.print(mult + " * " + mcand + " = ");
+//		System.out.print(mult + " * " + mcand + " = ");
 		int prod = mult * mcand;
 		byte[] ret = new byte[2];
 		ret[1] = (byte)(prod & 0xff);
 		ret[0] = (byte)((prod & 0xff00)>>8);
-		System.out.println(ret[0] + ", " + ret[1]);
+		if(ret[0] < 0) {
+			byte[] nret = new byte[3];
+			nret[0] = 0x00;
+			nret[1] = ret[0];
+			nret[2] = ret[1];
+			return nret;
+		}
+//		System.out.println(ret[0] + ", " + ret[1]);
 		return ret;
 	}
 
@@ -210,7 +217,7 @@ public class HeftyInteger {
 				int totalShifts = thisShifts + otherShifts;
 				byte[] prod = prodBytes(this.getVal()[i], other.getVal()[j]);
 				HeftyInteger partialProd = new HeftyInteger(prod, totalShifts);
-				System.out.println(totalShifts);
+//				System.out.println(totalShifts);
 				ans = ans.add(partialProd);
 			}
 		}
