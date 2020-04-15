@@ -6,21 +6,20 @@ You must submit an information sheet with every assignment.  Also be sure
 to submit all materials following the procedures described on the
 submission procedures page.
 
-Name:  
+Name:  Adam Karl
 
-Lecture section:  
+Lecture section: C (TuTh 2:30-4)
 
-Recitation day and time:  
+Recitation day and time:  Fr 1-2
 
-Assignment #:  
+Assignment #:  5
 
-Program due date:  
+Program due date: 4/17/2020
 
-Handed in date:  
+Handed in date:
 
 Source code file name(s):
-
-
+HeftyInteger.java
 
 
 
@@ -46,10 +45,3 @@ correctly?:
 
 
 Additional comments to the grader:
-
-
-
-
-
-
-

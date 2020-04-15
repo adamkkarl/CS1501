@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.math.BigInteger; //debugging purposes only
 
 public class HeftyInteger {
 
@@ -12,6 +13,17 @@ public class HeftyInteger {
 	 */
 	public HeftyInteger(byte[] b) {
 		val = b;
+	}
+
+	/**
+	 * Construct the HeftyInteger from a given byte array and an int
+	 * @param b the byte array that this HeftyInteger should represent
+	 */
+	public HeftyInteger(byte[] b, int trailingZeroBytes) {
+		val = new byte[b.length + trailingZeroBytes];
+		for (int i=0; i<b.length; i++) {
+			val[i] = b[i];
+		}
 	}
 
 	/**
@@ -174,6 +186,38 @@ public class HeftyInteger {
 		return this.add(other.negate());
 	}
 
+	private byte[] prodBytes(byte m1, byte m2) {
+		int mult = ((int)m1)&0xff;
+		int mcand = ((int)m2)&0xff;
+		System.out.print(mult + " * " + mcand + " = ");
+		int prod = mult * mcand;
+		byte[] ret = new byte[2];
+		ret[1] = (byte)(prod & 0xff);
+		ret[0] = (byte)((prod & 0xff00)>>8);
+		System.out.println(ret[0] + ", " + ret[1]);
+		return ret;
+	}
+
+	private HeftyInteger helperMultiply(HeftyInteger other) {
+		HeftyInteger ans = new HeftyInteger(this.getVal());
+		int thisLen = this.getVal().length;
+		int otherLen = other.getVal().length;
+
+		for (int i=0; i<thisLen; i++) {
+			int thisShifts = thisLen-1-i; //trailing zero bytes due to multiplicand
+			for (int j=0; j<otherLen; j++) {
+				int otherShifts = otherLen-1-j; //trailing zero bytes due to multiplier
+				int totalShifts = thisShifts + otherShifts;
+				byte[] prod = prodBytes(this.getVal()[i], other.getVal()[j]);
+				HeftyInteger partialProd = new HeftyInteger(prod, totalShifts);
+				System.out.println(totalShifts);
+				ans = ans.add(partialProd);
+			}
+		}
+		ans = ans.subtract(new HeftyInteger(this.getVal()));
+		return ans;
+	}
+
 	/**
 	 * Compute the product of this and other
 	 * @param other HeftyInteger to multiply by this
@@ -181,7 +225,27 @@ public class HeftyInteger {
 	 */
 	public HeftyInteger multiply(HeftyInteger other) {
 		// YOUR CODE HERE (replace the return, too...)
-		return null;
+		HeftyInteger ans;
+		boolean negProd = false;
+
+		if (other.isNegative()) {
+			negProd = !negProd;
+			other = other.negate();
+		}
+
+
+		if (this.isNegative()) {
+			negProd = !negProd;
+			ans = this.negate().helperMultiply(other);
+		} else {
+			ans = this.helperMultiply(other);
+		}
+
+		if (negProd) {
+			return ans.negate();
+		} else {
+			return ans;
+		}
 	}
 
 	/**
@@ -195,6 +259,18 @@ public class HeftyInteger {
 	 */
 	 public HeftyInteger[] XGCD(HeftyInteger other) {
 		// YOUR CODE HERE (replace the return, too...)
+		//TODO
 		return null;
+	 }
+
+	 //for debugging purposes ONLY
+	 public String toString() {
+		 return new BigInteger(val).toString();
+	 }
+
+	 public static void main(String[] args) {
+		 byte[] bs = {1,1,1};
+		 HeftyInteger h = new HeftyInteger(bs);
+		 System.out.println(h.toString());
 	 }
 }
