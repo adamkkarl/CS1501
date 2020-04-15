@@ -186,6 +186,8 @@ public class HeftyInteger {
 		return this.add(other.negate());
 	}
 
+	//input: 2 unsigned bytes to multiply
+	//output: byte array of product (w/ at least 1 leading 0)
 	private byte[] prodBytes(byte m1, byte m2) {
 		int mult = ((int)m1)&0xff;
 		int mcand = ((int)m2)&0xff;
@@ -194,7 +196,7 @@ public class HeftyInteger {
 		byte[] ret = new byte[2];
 		ret[1] = (byte)(prod & 0xff);
 		ret[0] = (byte)((prod & 0xff00)>>8);
-		if(ret[0] < 0) {
+		if(ret[0] < 0) { //if leading 1, add 0x0 byte at front
 			byte[] nret = new byte[3];
 			nret[0] = 0x00;
 			nret[1] = ret[0];
@@ -206,7 +208,9 @@ public class HeftyInteger {
 	}
 
 	private HeftyInteger helperMultiply(HeftyInteger other) {
-		HeftyInteger ans = new HeftyInteger(this.getVal());
+		byte[] z = new byte[1];
+		z[0] = 0;
+		HeftyInteger ans = new HeftyInteger(z);
 		int thisLen = this.getVal().length;
 		int otherLen = other.getVal().length;
 
@@ -217,11 +221,9 @@ public class HeftyInteger {
 				int totalShifts = thisShifts + otherShifts;
 				byte[] prod = prodBytes(this.getVal()[i], other.getVal()[j]);
 				HeftyInteger partialProd = new HeftyInteger(prod, totalShifts);
-//				System.out.println(totalShifts);
 				ans = ans.add(partialProd);
 			}
 		}
-		ans = ans.subtract(new HeftyInteger(this.getVal()));
 		return ans;
 	}
 
