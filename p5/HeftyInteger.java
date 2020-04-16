@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.math.BigInteger; //debugging purposes only
 
 public class HeftyInteger {
@@ -255,6 +254,34 @@ public class HeftyInteger {
 		} else {
 			return ans;
 		}
+	}
+
+
+	public boolean isGreaterThanOrEqualTo(HeftyInteger other) {
+		if (this.subtract(other).isNegative()) {
+			return false;
+		}
+		return true;
+	}
+
+
+	public HeftyInteger[] divide(HeftyInteger quotient, HeftyInteger divisor) {
+		byte[] bs = {0};
+		HeftyInteger divs = new HeftyInteger(bs);
+
+		byte[] Bs = {1};
+		HeftyInteger one = new HeftyInteger(Bs);
+
+
+		while (quotient.isGreaterThanOrEqualTo(divisor)) {
+			quotient = quotient.subtract(divisor);
+			divs = divs.add(one);
+		}
+
+		HeftyInteger[] ret = new HeftyInteger[2];
+		ret[0] = divs;
+		ret[1] = quotient;
+		return ret;
 	}
 
 	/**
