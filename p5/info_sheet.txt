@@ -16,7 +16,7 @@ Assignment #:  5
 
 Program due date: 4/17/2020
 
-Handed in date:
+Handed in date: 4/16/2020
 
 Source code file name(s):
 HeftyInteger.java
@@ -33,7 +33,7 @@ Other file name(s) (if relevant):
 
 
 
-Does your program run without error?:
+Does your program run without error?: Yes
 
 If not, what is/are the error(s) and which parts of your program run
 correctly?:

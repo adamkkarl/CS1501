@@ -1,4 +1,4 @@
-import java.math.BigInteger; //debugging purposes only
+//import java.math.BigInteger; //debugging purposes only
 
 public class HeftyInteger {
 
@@ -323,7 +323,7 @@ public class HeftyInteger {
 		ans[1] = b;
 
 
-		HeftyInteger[] quotients = new HeftyInteger[10000]; //stores 100 quotients
+		HeftyInteger[] quotients = new HeftyInteger[1000]; //stores 1000 quotients (probably overkill)
 		int numQuotients = 0;
 		while(!ans[1].isZero()) {
 			HeftyInteger[] temp = divide(ans[0], ans[1]);
@@ -362,9 +362,9 @@ public class HeftyInteger {
 	 }
 
 	 //for debugging purposes ONLY
-	 public String toString() {
-		 return new BigInteger(val).toString();
-	 }
+	 // public String toString() {
+		//  return new BigInteger(val).toString();
+	 // }
 
 	 public static void main(String[] args) {
 		 byte[] bs = {1,1,1};
