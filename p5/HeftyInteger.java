@@ -264,6 +264,15 @@ public class HeftyInteger {
 		return true;
 	}
 
+	public boolean isZero() {
+		for (int i=0; i<this.length(); i++) {
+			if (val[i] != 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 
 	public HeftyInteger[] divide(HeftyInteger quotient, HeftyInteger divisor) {
 		byte[] bs = {0};
@@ -295,8 +304,59 @@ public class HeftyInteger {
 	 */
 	 public HeftyInteger[] XGCD(HeftyInteger other) {
 		// YOUR CODE HERE (replace the return, too...)
-		//TODO
-		return null;
+		//returns [gcd, s, t] such that gcd = this*s + other*t
+		boolean flip = false; //true if other > this
+
+		HeftyInteger a, b, gcd;
+
+		if (this.isGreaterThanOrEqualTo(other)) {
+			a = new HeftyInteger(this.getVal());
+			b = other;
+		} else {
+			b = new HeftyInteger(this.getVal());
+			a = other;
+			flip = true;
+		}
+
+		HeftyInteger[] ans = new HeftyInteger[2];
+		ans[0] = a;
+		ans[1] = b;
+
+
+		HeftyInteger[] quotients = new HeftyInteger[100]; //stores 100 quotients
+		int numQuotients = 0;
+		while(!ans[1].isZero()) {
+			HeftyInteger[] temp = divide(ans[0], ans[1]);
+			ans[0] = ans[1];
+			ans[1] = temp[1];
+			quotients[numQuotients] = temp[0];
+			numQuotients++;
+		}
+		gcd = ans[0];
+		numQuotients--;
+
+		HeftyInteger[] st = new HeftyInteger[2];
+		byte[] bs = {1};
+		st[0] = new HeftyInteger(bs);
+		byte[] Bs = {0};
+		st[1] = new HeftyInteger(Bs);
+		while(numQuotients >= 0) {
+			HeftyInteger newS = st[1];
+			HeftyInteger newT = st[0].subtract(quotients[numQuotients].multiply(st[1]));
+			st[0] = newS;
+			st[1] = newT;
+		}
+
+		HeftyInteger[] ret = new HeftyInteger[3];
+		ret[0] = gcd;
+		if (flip) {
+			ret[1] = st[1];
+			ret[2] = st[0];
+		} else {
+			ret[1] = st[0];
+			ret[2] = st[1];
+		}
+		return ret;
 	 }
 
 	 //for debugging purposes ONLY
