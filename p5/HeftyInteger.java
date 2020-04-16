@@ -323,7 +323,7 @@ public class HeftyInteger {
 		ans[1] = b;
 
 
-		HeftyInteger[] quotients = new HeftyInteger[100]; //stores 100 quotients
+		HeftyInteger[] quotients = new HeftyInteger[10000]; //stores 100 quotients
 		int numQuotients = 0;
 		while(!ans[1].isZero()) {
 			HeftyInteger[] temp = divide(ans[0], ans[1]);
@@ -341,10 +341,12 @@ public class HeftyInteger {
 		byte[] Bs = {0};
 		st[1] = new HeftyInteger(Bs);
 		while(numQuotients >= 0) {
+
 			HeftyInteger newS = st[1];
 			HeftyInteger newT = st[0].subtract(quotients[numQuotients].multiply(st[1]));
 			st[0] = newS;
 			st[1] = newT;
+			numQuotients--;
 		}
 
 		HeftyInteger[] ret = new HeftyInteger[3];
