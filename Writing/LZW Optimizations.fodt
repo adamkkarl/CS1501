@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<office:document xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:officeooo="http://openoffice.org/2009/office" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:meta><meta:creation-date>2020-03-01T11:32:30.813000000</meta:creation-date><dc:date>2020-03-01T19:01:02.416000000</dc:date><meta:editing-duration>PT2H31M18S</meta:editing-duration><meta:editing-cycles>13</meta:editing-cycles><meta:generator>LibreOffice/6.4.3.2$Windows_X86_64 LibreOffice_project/747b5d0ebf89f41c860ec2a39efd7cb15b54f2d8</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="5" meta:paragraph-count="11" meta:word-count="1610" meta:character-count="9228"/></office:meta>
+ <office:settings>
+  <config:config-item-set config:name="ooo:view-settings">
+   <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">24661</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">22729</config:config-item>
+   <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
+   <config:config-item-map-indexed config:name="Views">
+    <config:config-item-map-entry>
+     <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">4075</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">3041</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">24659</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">22728</config:config-item>
+     <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
+     <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
+     <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">100</config:config-item>
+     <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
+    </config:config-item-map-entry>
+   </config:config-item-map-indexed>
+  </config:config-item-set>
+  <config:config-item-set config:name="ooo:configuration-settings">
+   <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string"/>
+   <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
+   <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
+   <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
+   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="FloattableNomargins" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AddVerticalFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
+   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
+   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+   <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
+   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RsidRoot" config:type="int">1489729</config:config-item>
+   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">3592104</config:config-item>
+   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="TabOverflow" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ClippedPictures" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmptyDbFieldHidesPara" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ApplyParagraphMarkFormatToNumbering" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ContinuousEndnotes" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
+   <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintFaxName" config:type="string"/>
+   <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintEmptyPages" config:type="boolean">true</config:config-item>
+  </config:config-item-set>
+ </office:settings>
+ <office:scripts>
+  <office:script script:language="ooo:Basic">
+   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </office:script>
+ </office:scripts>
+ <office:font-face-decls>
+  <style:font-face style:name="Arial1" svg:font-family="Arial" style:font-family-generic="swiss"/>
+  <style:font-face style:name="Liberation Serif" svg:font-family="&apos;Liberation Serif&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="Times New Roman" svg:font-family="&apos;Times New Roman&apos;" style:font-adornments="Regular" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="Liberation Sans" svg:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="swiss" style:font-pitch="variable"/>
+  <style:font-face style:name="Arial" svg:font-family="Arial" style:font-family-generic="system" style:font-pitch="variable"/>
+  <style:font-face style:name="Microsoft YaHei" svg:font-family="&apos;Microsoft YaHei&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
+  <style:font-face style:name="NSimSun" svg:font-family="NSimSun" style:font-family-generic="system" style:font-pitch="variable"/>
+ </office:font-face-decls>
+ <office:styles>
+  <style:default-style style:family="graphic">
+   <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.1181in" draw:shadow-offset-y="0.1181in" draw:start-line-spacing-horizontal="0.1114in" draw:start-line-spacing-vertical="0.1114in" draw:end-line-spacing-horizontal="0.1114in" draw:end-line-spacing-vertical="0.1114in" style:flow-with-text="false"/>
+   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties style:use-window-font-color="true" style:font-name="Liberation Serif" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="NSimSun" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Arial" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
+  </style:default-style>
+  <style:default-style style:family="paragraph">
+   <style:paragraph-properties fo:orphans="2" fo:widows="2" fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="0.5in" style:writing-mode="lr-tb"/>
+   <style:text-properties style:use-window-font-color="true" style:font-name="Liberation Serif" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="NSimSun" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Arial" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:default-style>
+  <style:default-style style:family="table">
+   <style:table-properties table:border-model="collapsing"/>
+  </style:default-style>
+  <style:default-style style:family="table-row">
+   <style:table-row-properties fo:keep-together="auto"/>
+  </style:default-style>
+  <style:style style:name="Standard" style:family="paragraph" style:class="text" style:master-page-name="">
+   <style:paragraph-properties fo:line-height="200%" style:page-number="auto">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties style:font-name="Times New Roman" fo:font-family="&apos;Times New Roman&apos;" style:font-style-name="Regular" style:font-family-generic="roman" style:font-pitch="variable"/>
+  </style:style>
+  <style:style style:name="Heading" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Text_20_body" style:class="text">
+   <style:paragraph-properties fo:margin-top="0.1665in" fo:margin-bottom="0.0835in" loext:contextual-spacing="false" fo:keep-with-next="always"/>
+   <style:text-properties style:font-name="Liberation Sans" fo:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="14pt" style:font-name-asian="Microsoft YaHei" style:font-family-asian="&apos;Microsoft YaHei&apos;" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-name-complex="Arial" style:font-family-complex="Arial" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="14pt"/>
+  </style:style>
+  <style:style style:name="Text_20_body" style:display-name="Text body" style:family="paragraph" style:parent-style-name="Standard" style:class="text">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0.0972in" loext:contextual-spacing="false" fo:line-height="115%"/>
+  </style:style>
+  <style:style style:name="List" style:family="paragraph" style:parent-style-name="Text_20_body" style:class="list">
+   <style:text-properties style:font-size-asian="12pt" style:font-name-complex="Arial1" style:font-family-complex="Arial" style:font-family-generic-complex="swiss"/>
+  </style:style>
+  <style:style style:name="Caption" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
+   <style:paragraph-properties fo:margin-top="0.0835in" fo:margin-bottom="0.0835in" loext:contextual-spacing="false" text:number-lines="false" text:line-number="0"/>
+   <style:text-properties fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Arial1" style:font-family-complex="Arial" style:font-family-generic-complex="swiss" style:font-size-complex="12pt" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="Index" style:family="paragraph" style:parent-style-name="Standard" style:class="index">
+   <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
+   <style:text-properties style:font-size-asian="12pt" style:font-name-complex="Arial1" style:font-family-complex="Arial" style:font-family-generic-complex="swiss"/>
+  </style:style>
+  <text:outline-style style:name="Outline">
+   <text:outline-level-style text:level="1" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="2" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="3" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="4" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="5" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="6" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="7" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="8" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="9" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="10" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+  </text:outline-style>
+  <text:notes-configuration text:note-class="footnote" style:num-format="1" text:start-value="0" text:footnotes-position="page" text:start-numbering-at="document"/>
+  <text:notes-configuration text:note-class="endnote" style:num-format="i" text:start-value="0"/>
+  <text:linenumbering-configuration text:number-lines="false" text:offset="0.1965in" style:num-format="1" text:number-position="left" text:increment="5"/>
+  <style:default-page-layout>
+   <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
+  </style:default-page-layout>
+ </office:styles>
+ <office:automatic-styles>
+  <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="001c3dff" officeooo:paragraph-rsid="001c3dff"/>
+  </style:style>
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="001e42b4" officeooo:paragraph-rsid="00350177"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="002b2601"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="002ed7d3" officeooo:paragraph-rsid="002ed7d3"/>
+  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="002ed7d3" officeooo:paragraph-rsid="003178ec"/>
+  </style:style>
+  <style:style style:name="T1" style:family="text">
+   <style:text-properties officeooo:rsid="00184e8d"/>
+  </style:style>
+  <style:style style:name="T2" style:family="text">
+   <style:text-properties officeooo:rsid="0018a2e6"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
+   <style:text-properties officeooo:rsid="001a007f"/>
+  </style:style>
+  <style:style style:name="T4" style:family="text">
+   <style:text-properties officeooo:rsid="001b7851"/>
+  </style:style>
+  <style:style style:name="T5" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="001b7851"/>
+  </style:style>
+  <style:style style:name="T6" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="00218539"/>
+  </style:style>
+  <style:style style:name="T7" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="00224a23"/>
+  </style:style>
+  <style:style style:name="T8" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="00239001"/>
+  </style:style>
+  <style:style style:name="T9" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="00248c4f"/>
+  </style:style>
+  <style:style style:name="T10" style:family="text">
+   <style:text-properties style:font-name="Times New Roman" officeooo:rsid="0027e266"/>
+  </style:style>
+  <style:style style:name="T11" style:family="text">
+   <style:text-properties officeooo:rsid="001e0b90"/>
+  </style:style>
+  <style:style style:name="T12" style:family="text">
+   <style:text-properties officeooo:rsid="001e3150"/>
+  </style:style>
+  <style:style style:name="T13" style:family="text">
+   <style:text-properties officeooo:rsid="001e42b4"/>
+  </style:style>
+  <style:style style:name="T14" style:family="text">
+   <style:text-properties officeooo:rsid="001f3655"/>
+  </style:style>
+  <style:style style:name="T15" style:family="text">
+   <style:text-properties officeooo:rsid="00206fa0"/>
+  </style:style>
+  <style:style style:name="T16" style:family="text">
+   <style:text-properties fo:font-style="italic" officeooo:rsid="00206fa0" style:font-style-asian="italic" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="T17" style:family="text">
+   <style:text-properties fo:font-style="italic" officeooo:rsid="00239001" style:font-style-asian="italic" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="T18" style:family="text">
+   <style:text-properties fo:font-style="italic" officeooo:rsid="002ae623" style:font-style-asian="italic" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="T19" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="00206fa0" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T20" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="001f3655" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T21" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="00239001" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T22" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="002ae623" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T23" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="002ceb83" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T24" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="002ed7d3" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T25" style:family="text">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="003178ec" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="T26" style:family="text">
+   <style:text-properties officeooo:rsid="00218539"/>
+  </style:style>
+  <style:style style:name="T27" style:family="text">
+   <style:text-properties officeooo:rsid="00224a23"/>
+  </style:style>
+  <style:style style:name="T28" style:family="text">
+   <style:text-properties officeooo:rsid="00239001"/>
+  </style:style>
+  <style:style style:name="T29" style:family="text">
+   <style:text-properties officeooo:rsid="002ae623"/>
+  </style:style>
+  <style:style style:name="T30" style:family="text">
+   <style:text-properties officeooo:rsid="002ed7d3"/>
+  </style:style>
+  <style:style style:name="T31" style:family="text">
+   <style:text-properties officeooo:rsid="00307f2b"/>
+  </style:style>
+  <style:style style:name="T32" style:family="text">
+   <style:text-properties officeooo:rsid="003178ec"/>
+  </style:style>
+  <style:page-layout style:name="pm1">
+   <style:page-layout-properties fo:page-width="8.5in" fo:page-height="11in" style:num-format="1" style:print-orientation="portrait" fo:margin-top="1in" fo:margin-bottom="1in" fo:margin-left="1in" fo:margin-right="1in" fo:border="none" fo:padding="0in" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="44" style:layout-grid-base-height="0.2165in" style:layout-grid-ruby-height="0in" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="true" style:layout-grid-display="true" style:layout-grid-base-width="0.1457in" style:layout-grid-snap-to="true" style:footnote-max-height="0in">
+    <style:footnote-sep style:width="0.0071in" style:distance-before-sep="0.0398in" style:distance-after-sep="0.0398in" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
+   </style:page-layout-properties>
+   <style:header-style/>
+   <style:footer-style/>
+  </style:page-layout>
+ </office:automatic-styles>
+ <office:master-styles>
+  <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
+ </office:master-styles>
+ <office:body>
+  <office:text text:use-soft-page-breaks="true">
+   <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
+   <text:sequence-decls>
+    <text:sequence-decl text:display-outline-level="0" text:name="Illustration"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Table"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
+   </text:sequence-decls>
+   <text:p text:style-name="P3"><text:span text:style-name="T1"><text:tab/>LZW is a lossless data compression algorithm published in 1984. Named for its creators Abraham Lempel, Jacob Ziv, and Terry Welch, </text:span><text:span text:style-name="T2">it improves upon Huffman </text:span><text:span text:style-name="T6">compression</text:span><text:span text:style-name="T2"> from the 1950s </text:span><text:span text:style-name="T28">in several areas, including</text:span><text:span text:style-name="T2">: </text:span><text:span text:style-name="T3">(a) </text:span><text:span text:style-name="T5">building up codes</text:span><text:span text:style-name="T4"> for multiple-character strings,</text:span><text:span text:style-name="T2"> (</text:span><text:span text:style-name="T3">b</text:span><text:span text:style-name="T2">) not requiring time to pre-process the input file </text:span><text:span text:style-name="T26">to</text:span><text:span text:style-name="T3"> build </text:span><text:span text:style-name="T26">the</text:span><text:span text:style-name="T3"> code book</text:span><text:span text:style-name="T2">, and (</text:span><text:span text:style-name="T3">c</text:span><text:span text:style-name="T2">) not requiring </text:span><text:span text:style-name="T3">the </text:span><text:span text:style-name="T4">code book to be stored in the compressed file. </text:span><text:span text:style-name="T26">The result is a versatile algorithm that is still widely used today (often with slight modifications).</text:span></text:p>
+   <text:p text:style-name="Standard"><text:tab/><text:span text:style-name="T2">A key aspect of LZW compression is that </text:span><text:span text:style-name="T29">the pattern-</text:span><text:span text:style-name="T26">code word </text:span><text:span text:style-name="T29">pairs</text:span><text:span text:style-name="T26"> are built up in a predictable way from a known starting point (here using the 256 ASCII characters), so the expansion algorithm </text:span><text:span text:style-name="T29">can build up the code book in an identical way rather than including a form of the code book in the compressed file. For compression, this is done by finding the longest prefix of the text that’s already in the code book, then looking ahead 1 more character for the pattern to add. For expansion, this is done by adding the first character of the current pattern to the end of the previous pattern. It is important to note that expansion “lags” one code word behind compression, so we must be especially careful when implementing it.</text:span></text:p>
+   <text:p text:style-name="Standard"><text:tab/><text:span text:style-name="T26">For the second assignment, we are given a file that implements LZW compression using fixed-length, 16-bit code words. A downside </text:span><text:span text:style-name="T27">of using 12-bit codes is that </text:span><text:span text:style-name="T7">since the code book only starts with 8-bit ASCII characters, and builds up linearly from9-bit code words, in the beginning there are several leading zeroes for each code word. </text:span><text:span text:style-name="T8">F</text:span><text:span text:style-name="T7">or example, the first ~1,</text:span><text:span text:style-name="T8">790</text:span><text:span text:style-name="T7"> codes </text:span><text:span text:style-name="T8">sent to the compressed file</text:span><text:span text:style-name="T7"> are guarantee to have at least one leading zer</text:span><text:span text:style-name="T8">o, and earlier code words will have even more</text:span><text:span text:style-name="T7">. Having so much meaningless information is detrimental to the overall goal of data compression, so our first task is to implement LZW compression that varies from 8 to 16 bit code words, skipping over any leading zeroes that don’t convey any information. </text:span><text:soft-page-break/><text:span text:style-name="T8">Instead, as soon as the 9-bit code words are filled up, the algorithm will switch to 10-bit code words, and so on. </text:span><text:span text:style-name="T9">T</text:span><text:span text:style-name="T7">he mode that takes only this first step will be called “do-nothing mode.”</text:span></text:p>
+   <text:p text:style-name="Standard"><text:span text:style-name="T7"><text:tab/>The </text:span><text:span text:style-name="T10">motivation for the second mode, “reset mode,” is that some large files have significant pattern changes part of the way through the file. For instance, a dictionary has lots of words with Xs and Zs near the end, but very few near the beginning. Since these characters haven’t been encountered that often before, it’s unlikely that pattern-code word pairs already exist, and if the code book is entirely full, no new code words can be generated. Therefore, our algorithm up to this point would be quite poor at compressing the end of such a file, and would have to resort to encoding only one or two characters per code word. The first solution we will implement is a reset mode, that fully clears the code book and begins fresh like it would at the beginning of the file with only the ASCII characters. </text:span></text:p>
+   <text:p text:style-name="Standard"><text:tab/><text:span text:style-name="T29">However, it’s not </text:span><text:span text:style-name="T18">always </text:span><text:span text:style-name="T22">necessary to reset the code book completely. For instance, most novels don’t include drastic language or style changes, so there’s no reason that our old patterns shouldn’t work. Therefore, the last mode (monitor mode) is based on keeping track of a compression ratio once the code book is completely full. If </text:span><text:span text:style-name="T23">the compression ratio drops 10% after the code book fills, then (and only then) will we reset code book.</text:span><text:span text:style-name="T22"> It should be noted that this strategy is imperfect since it reacts </text:span><text:span text:style-name="T23">quite late</text:span><text:span text:style-name="T22"> to a significant drop in compression quality. However, if we don’t know anything about the file, its hard to know whether we want to reset the code book, so this strategy is a decent “middle ground” approach, and is unlikely to be the worst implementation of the three.</text:span></text:p>
+   <text:p text:style-name="P1"><text:tab/>I see two ways to handle the 3 different modes of compression. The first approach is to build one compression and one expansion function that handles <text:span text:style-name="T11">only distinguishes between the modes (with an if - else if - else block) in the scenario where the entire code book has been filled </text:span><text:soft-page-break/><text:span text:style-name="T11">through 16-bit code words</text:span>. <text:span text:style-name="T11">Taking advantage of the similarities between the methods, this approach would result in a very concise final product with very little repeated code.</text:span> The second approach is to build separate functions for each of the 3 modes <text:span text:style-name="T11">for each compression and expansion. Although this function </text:span><text:span text:style-name="T12">results in three times as much code due to a lot of repetition across functions, it allows for more modularity of individual modes. For instance, I can imaging a scenario where reset mode handles the full code book at the beginning of the while loop, but when implementing monitor mode I realize I want to handle the reset case elsewhere in the while loop, or in a slightly different fashion. Having separate func</text:span><text:span text:style-name="T26">t</text:span><text:span text:style-name="T12">ions allows me to tinker with one mode without having to worry about breaking one I’ve already finished.</text:span><text:span text:style-name="T11"> With this in mind, I am going to </text:span><text:span text:style-name="T13">initially</text:span><text:span text:style-name="T11"> use the second approach and have separate functions for do-nothing compression, reset compression, monitor compression, do-nothing expansion, rest expansion, and monitor expansion. Since the modes largely build off of each other, I will be able to first finish do-nothing mode, and use that code for the base for reset mode, then finally use the reset mode code as the base for monitor mode. </text:span><text:span text:style-name="T13">If I finish with enough time and find it necessary, I may refactor them into a single compress and expand function at the end.</text:span></text:p>
+   <text:p text:style-name="P1"><text:tab/><text:span text:style-name="T12">Due to the specifications, the compression mode type must be included in the compressed file, and we are not allowed to just type the mode in the command line when expanding. </text:span><text:span text:style-name="T13">Although we only technically need 2 bits to choose between 3 options, I’m going to just output the character ‘n’, ‘r’, or ‘m’ to the beginning of the compressed file for simplicity. This way when uncompressing we can simply use the readChar() function of BinaryStdIn to get the compression type, </text:span><text:span text:style-name="T14">then call the function for the corresponding expand</text:span><text:span text:style-name="T13">.</text:span></text:p>
+   <text:p text:style-name="P2"><text:tab/><text:span text:style-name="T14">Going from the base LZW file to our specified do-nothing mode requires only implementing variable-length keywords from 9-16 bits rather than fixed 12-bit keywords. The </text:span><text:soft-page-break/><text:span text:style-name="T14">first step is to remove the “final” tag from global variables L (current end of code book) and W (current code word width). Then set W=9 and L=512 (2^W). Then in the compression while loop we need an if statement to see if the code book is filled up to the current cap (</text:span><text:span text:style-name="T32">(</text:span><text:span text:style-name="T30">nextAvailable</text:span><text:span text:style-name="T32">)code</text:span><text:span text:style-name="T30"> </text:span><text:span text:style-name="T14"><text:s/>== L) and </text:span><text:span text:style-name="T15">if there’s still room to grow the code words (W &lt; 16). If so, we simply double L and add add one to W and continue with code words one bit longer. Implementing do-nothing compress is </text:span><text:span text:style-name="T16">almost </text:span><text:span text:style-name="T19">exactly the same, but since the compression code book trails by 1 code word, I’ll instead look to expand when </text:span><text:span text:style-name="T20">(</text:span><text:span text:style-name="T25">(</text:span><text:span text:style-name="T24">nextAvailable</text:span><text:span text:style-name="T25">)code</text:span><text:span text:style-name="T24"> </text:span><text:span text:style-name="T20"><text:s/>== L – </text:span><text:span text:style-name="T19">1). Everything else for these algorithms is already implemented in LZW.java, since the code book just stops adding codes once entirely full like our code book is at W == 16. </text:span><text:span text:style-name="T21">Once do-nothing mode is complete I plan on running the full range of provided tests, compressing then re-expanding each test file and using the linux “cmp” command to make sure that the re-expanded file is </text:span><text:span text:style-name="T17">exactly</text:span><text:span text:style-name="T21"> the same as the original. It is essential that everything is in working order before copying the final code into the reset mode functions and continuing.</text:span></text:p>
+   <text:p text:style-name="P1"><text:tab/><text:span text:style-name="T30">Going from do-nothing variable code length mode to reset mode involves resetting the </text:span></text:p>
+   <text:p text:style-name="P5">code book when the <text:span text:style-name="T32">(</text:span>nextAvailable<text:span text:style-name="T32">)code</text:span> == L and W=16, so there’s no room for any more code words. For compress, we reset the code book by copy/pasting the initial code <text:span text:style-name="T31">about setting st (the code book) to a new TST and the for loop that adds the ASCII characters to the code book. Then we just set </text:span><text:span text:style-name="T32">(</text:span>nextAvailable<text:span text:style-name="T32">)code</text:span> <text:span text:style-name="T31"><text:s/>to R+1, and L and W back to 512 and 9 and the code book is effectively reset. For expand, we do the same thing but since the code book is an array, we only have to reset the code book to the first 257 elements (256 ASCII + end of file char).</text:span></text:p>
+   <text:p text:style-name="P4"><text:tab/><text:span text:style-name="T31">The last mode is monitor mode, which is similar to reset mode except we also consider a heuristic before resetting the code book. To keep track of the compression ratio, for both compression and expansion I’ll add integers for keeping track of both the uncompressed bits </text:span><text:soft-page-break/><text:span text:style-name="T31">processed and compressed bits processed that increment along with the uncompressed text (8 bits/char) and compressed code words (</text:span><text:span text:style-name="T32">W</text:span><text:span text:style-name="T31"> bi</text:span><text:span text:style-name="T32">ts each</text:span><text:span text:style-name="T31">) </text:span><text:span text:style-name="T32">that the algorithm processes</text:span><text:span text:style-name="T31">. </text:span><text:span text:style-name="T32">The first time the code book fills, it’ll store the “old ratio” in a double equal to uncompressed bits/compressed bits. Each code word after that point, a “current ratio” is calculated the same way. If (and only if) old ratio / current ratio exceeds 1.1, the algorithm will reset the code book (as implemented for reset mode) in hopes of building up more efficient patterns. At this point, it’ll also reset old ratio, uncompressed bits, and compressed bits to start over in case the file is long enough that the code book might be reset a second time or more. I anticipate getting the compress and expand to reset at the same time to be the most difficult part of this lab, and it’s the main reason I’m going to implement each of the modes in their own separate functions in case I have to tinker around with one of them.</text:span></text:p>
+  </office:text>
+ </office:body>
+</office:document>
